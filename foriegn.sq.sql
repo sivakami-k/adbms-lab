@@ -1,0 +1,14 @@
+use db;
+create table courses(c_no int primary key,course_name varchar(20));
+insert into courses values(1000,"mca");
+insert into courses values(1002,"cse");
+insert into courses values(1003,"eee");
+insert into courses values(1004,"mca");
+insert into courses values(1005,"mech");
+create table faculties(f_no int primary key,f_name varchar(20), c_no int,foreign key(c_no) references courses(c_no));
+describe faculties;
+insert into faculties values(100,"HOD",1000);
+insert into faculties values(101,"HOD",1002);
+insert into faculties values(102,"HOD",1003);
+insert into faculties values(103,"HOD",1004);
+insert into faculties values(107,"HOD",1008);
